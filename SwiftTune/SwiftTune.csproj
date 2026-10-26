@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{11C37E55-2B0F-4A09-B6C7-925275167BFD}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>SwiftTune</RootNamespace>
+    <AssemblyName>SwiftTune</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ConfigurationManager.cs" />
+    <Compile Include="CustomLevelOptimizationDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomLevelOptimizationDetail.Designer.cs">
+      <DependentUpon>CustomLevelOptimizationDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FirstHelloScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FirstHelloScreen.Designer.cs">
+      <DependentUpon>FirstHelloScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HigherLevelOptimizationDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HigherLevelOptimizationDetail.Designer.cs">
+      <DependentUpon>HigherLevelOptimizationDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LicenseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LicenseForm.Designer.cs">
+      <DependentUpon>LicenseForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LowerLevelOptimizationDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LowerLevelOptimizationDetails.Designer.cs">
+      <DependentUpon>LowerLevelOptimizationDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OptimizationLevelsScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OptimizationLevelsScreen.Designer.cs">
+      <DependentUpon>OptimizationLevelsScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OptimizationManager.cs" />
+    <Compile Include="OptimizationScriptBuilder.cs" />
+    <Compile Include="OtherControls.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OtherControls.Designer.cs">
+      <DependentUpon>OtherControls.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ScreenForChangeCustomLevelOptimization.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ScreenForChangeCustomLevelOptimization.Designer.cs">
+      <DependentUpon>ScreenForChangeCustomLevelOptimization.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserAgreement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserAgreement.Designer.cs">
+      <DependentUpon>UserAgreement.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="CustomLevelOptimizationDetail.resx">
+      <DependentUpon>CustomLevelOptimizationDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FirstHelloScreen.resx">
+      <DependentUpon>FirstHelloScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HigherLevelOptimizationDetail.resx">
+      <DependentUpon>HigherLevelOptimizationDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LicenseForm.resx">
+      <DependentUpon>LicenseForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LowerLevelOptimizationDetails.resx">
+      <DependentUpon>LowerLevelOptimizationDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OptimizationLevelsScreen.resx">
+      <DependentUpon>OptimizationLevelsScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OtherControls.resx">
+      <DependentUpon>OtherControls.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="ScreenForChangeCustomLevelOptimization.resx">
+      <DependentUpon>ScreenForChangeCustomLevelOptimization.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserAgreement.resx">
+      <DependentUpon>UserAgreement.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.manifest" />
+    <None Include="InProjectAllBatFiles\InFirstHelloScreenBatFile\CreateRestorePoint.bat">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="InProjectAllBatFiles\InMainScreenOptimizationAllBatFiles\CustomLevelOptimization.bat">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="InProjectAllBatFiles\InMainScreenOptimizationAllBatFiles\HigherLevelOptimization.bat">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="InProjectAllBatFiles\InMainScreenOptimizationAllBatFiles\LowerLevelOptimization.bat">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="InProjectAllBatFiles\InMainScreenOptimizationAllBatFiles\RestoreRegistryToDefault.bat">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="InProjectAllBatFiles\InOtherControlsAllBatFiles\ClearAllFoldersTEMP.bat">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="InProjectAllBatFiles\InOtherControlsAllBatFiles\ClearDNSCache.bat">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="InProjectAllBatFiles\InOtherControlsAllBatFiles\DISMCheck.bat">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="InProjectAllBatFiles\InOtherControlsAllBatFiles\ForSFCscannow.bat">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="InProjectAllBatFiles\InOtherControlsAllBatFiles\OpenStartupInFileManager.bat">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="InProjectAllBatFiles\InOtherControlsAllBatFiles\RestartExplorer.bat">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="InProjectAllBatFiles\InOtherControlsAllBatFiles\RestartServicesInWindows.bat">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="InProjectAllBatFiles\InOtherControlsAllBatFiles\RestoreWinsock.bat">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="imgresources\backup.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="imgresources\Check.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="imgresources\Clear.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="imgresources\ClearTemp.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="imgresources\Computer.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="imgresources\ComputerProfile.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="imgresources\console-cmd-icon.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="imgresources\Control_Panel_icon.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="imgresources\FileCommander.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="imgresources\ForDISMCheck.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="imgresources\ForPlusIcon.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="imgresources\InformationIcon.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="imgresources\LaunchStartup.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="imgresources\license.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="imgresources\logo.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="imgresources\logo.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="imgresources\OpenInExplorerIcon.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="imgresources\other.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="imgresources\PersonalControlMGMT.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="imgresources\reload.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="imgresources\Restore.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="imgresources\settings.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="imgresources\TaskManager.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="imgresources\understood.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="imgresources\WindowsTaskManagerOldIcon.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="imgresources\Windows_11_Explorer.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="imgresources\Windows_11_registry_editor_icon.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
